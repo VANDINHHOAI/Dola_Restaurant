@@ -115,9 +115,9 @@
                                                     <div class="price_main">82.000₫</div>
                                                     <div class="quantity_main">
                                                         <div class="quantity_item">
-                                                            <button class="button ">-</button>
-                                                            <input type="number" value="1">
-                                                            <button class="button">+</button>
+                                                            <div class="button " onclick="decrement()"><span>-</span></div>
+                                                            <input type="number" value="1" readonly id="numberInput">
+                                                            <div class="button" onclick="increment()"><span>+</span></div>
                                                         </div>
                                                     </div>
                                                     <div class="price_main">82.000₫</div>
@@ -255,7 +255,7 @@
     <!-- button scroll to top design -->
     <button id="toTop"><i class="fa-solid fa-chevron-up"></i></button>
 
-    <script src="buy.js"></script>
+    <script src="../public/js/buy.js"></script>
 </body>
 
 </html>

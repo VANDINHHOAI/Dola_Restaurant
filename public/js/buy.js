@@ -96,3 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
       inputField.value = currentValue + 1;
     }
   });
+  function increment() {
+    var inputElement = document.getElementById("numberInput");
+    var currentValue = parseInt(inputElement.value, 10);
+    inputElement.value = currentValue + 1;
+}
+
+function decrement() {
+    var inputElement = document.getElementById("numberInput");
+    var currentValue = parseInt(inputElement.value, 10);
+    
+    // Đảm bảo số nhỏ nhất là 1
+    if (currentValue > 1) {
+        inputElement.value = currentValue - 1;
+    }
+}
