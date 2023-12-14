@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $user_id = $_GET['user_id'];
-    $user = get_users($user_id);
+    $user = get_user($user_id);
 
     include_once '../view/users/_edit.php';
 }

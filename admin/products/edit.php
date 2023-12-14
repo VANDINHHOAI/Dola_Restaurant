@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "quantity" => $_POST["quantity"],
     );
 
-    update_products($products_id);
+    update_product($products_id);
 
     header('Location: index.php');
 
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $product_id = $_GET['product_id'];
-    $product = get_products($product_id);
+    $product = get_product($product_id);
 
     include_once '../view/products/_edit.php';
 }

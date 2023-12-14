@@ -11,14 +11,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "phone" => $_POST["phone"],
     );
 
-    update_orders($updateOrder);
+    update_order($updateOrder);
 
     header('Location: index.php');
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $order_id = $_GET['order_id'];
-    $order = get_orders($order_id);
-    
+    $order = get_order($order_id);
+
     include_once '../view/orders/_edit.php';
 }

@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "quantity" => $_POST["quantity"],
         "category_id" => $_POST["category_id"]
     );
-    insert_products($createProduct);
+    insert_product($createProduct);
 
     header('Location: index.php');
 }
