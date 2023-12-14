@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt hàng</title>
-    <link rel="stylesheet" href="../public/css/buy.css">
-    <link rel="shortcut icon" href="../public/image/logo/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./public/css/buy.css">
+    <link rel="shortcut icon" href="./public/image/logo/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- header design -->
     <header class="header" id="header">
         <div class="container">
-            <div class="logo" id="logo"><img src="../public/image/logo/logo.png" alt=""></div>
+            <div class="logo" id="logo"><img src="./public/image/logo/logo.png" alt=""></div>
             <nav class="navbar" id="navbar">
                 <div class="container">
                     <ul>
@@ -87,7 +87,7 @@
                 <div class="col-lg-9">
                     <div class="buy">
                         <div class="img-product" id="product-image">
-                            <img src="../public/image/products/1.jpg" alt="" >
+                            <img src="./public/image/products/1.jpg" alt="" >
                         </div>
                         <div class="order">
                             <h1 class="title-product" id="product-name">Ten san pham</h1>
@@ -138,7 +138,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/1.jpg" alt=""> 
+                                    <img src="./public/image/products/1.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                      <a href="#" class="product-name">Salad rau mùa sốt cam</a>
@@ -153,7 +153,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/2.jpg" alt=""> 
+                                    <img src="./public/image/products/2.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Salad rau mùa sốt mác..</a>
@@ -168,7 +168,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/3.jpg" alt=""> 
+                                    <img src="./public/image/products/3.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Phở cuốn</a>
@@ -183,7 +183,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/4.jpg" alt=""> 
+                                    <img src="./public/image/products/4.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Gỏi tai heo hoa chuối</a>
@@ -206,7 +206,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/9.jpg" alt=""> 
+                                    <img src="./public/image/products/9.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Phì spaghetti sốt kem nấm</a>
@@ -221,7 +221,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/7.jpg" alt=""> 
+                                    <img src="./public/image/products/7.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Sụn gà xóc muối Tây</a>
@@ -236,7 +236,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/6.jpg" alt=""> 
+                                    <img src="./public/image/products/6.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Ức gà đút lò phủ lá chanh</a>
@@ -251,7 +251,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <a href="#">
-                                    <img src="../public/image/products/4.jpg" alt=""> 
+                                    <img src="./public/image/products/4.jpg" alt=""> 
                                  </a>
                                  <div class="product-info">
                                     <a href="#" class="product-name">Gỏi tai heo hoa chuối</a>
@@ -274,7 +274,7 @@
                         <div class="title">Có thể bạn đang tìm</div>
                         <div class="product">
                             <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong1.jpg" alt="">
+                                <img src="./public/image/products/đồ uống/do-uong1.jpg" alt="">
                                 <div class="product-info">
                                     <div class="info">
                                         <a href="#" class="product-name">Dương chi cam lộ</a>
@@ -287,7 +287,7 @@
                             </div>
 
                             <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong2.jpg" alt="">
+                                <img src="./public/image/products/đồ uống/do-uong2.jpg" alt="">
                                 <div class="product-info">
                                     <div class="info">
                                         <a href="#" class="product-name">Trà lài nhãn</a>
@@ -300,7 +300,7 @@
                             </div>
 
                             <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong3.jpg" alt="">
+                                <img src="./public/image/products/đồ uống/do-uong3.jpg" alt="">
                                 <div class="product-info">
                                     <div class="info">
                                         <a href="#" class="product-name">Trà sữa Oolong</a>
@@ -313,7 +313,7 @@
                             </div>
 
                             <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong4.jpg" alt="">
+                                <img src="./public/image/products/đồ uống/do-uong4.jpg" alt="">
                                 <div class="product-info">
                                     <div class="info">
                                         <a href="#" class="product-name">Cà phê</a>
@@ -326,7 +326,7 @@
                             </div>
 
                             <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong5.jpg" alt="">
+                                <img src="./public/image/products/đồ uống/do-uong5.jpg" alt="">
                                 <div class="product-info">
                                     <div class="info">
                                         <a href="#" class="product-name">Nước cam</a>
@@ -339,7 +339,7 @@
                             </div>
 
                             <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong6.jpg" alt="">
+                                <img src="./public/image/products/đồ uống/do-uong6.jpg" alt="">
                                 <div class="product-info">
                                     <div class="info">
                                         <a href="#" class="product-name">Nước ép dâu tây</a>
@@ -361,7 +361,7 @@
         <div class="container">
             <div class="info">
                 <div class="logo">
-                    <img src="../public/image/logo/logo.png" alt="">
+                    <img src="./public/image/logo/logo.png" alt="">
                 </div>
                 <div class="ft-description">
                     Nhà hàng chúng tôi luôn luôn đặt khách hàng lên hàng đầu, tận tâm phục vụ, mang lại cho khách hàng những trãi nghiệm tuyệt với nhất. Các món ăn với công thức độc quyền sẽ mang lại hương vị mới mẻ cho thực khách. Dola Restaurant xin chân thành cảm ơn.
@@ -404,15 +404,15 @@
             <div class="social-box">
                 <h4 class="title-menu">Mạng xã hội</h4>
                 <ul class="social">
-                    <li><a href="#"><img src="../public/image/icon/zalo.svg" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/facebook.svg" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/youtube.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/zalo.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/youtube.svg" alt=""></a></li>
                 </ul>
                 <h4 class="title-menu">Hình thức thanh toán</h4>
                 <ul class="thanhtoan">
-                    <li><a href="#"><img src="../public/image/icon/payment_1.png" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/payment_2.png" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/payment_3.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_1.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_3.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
