@@ -1,22 +1,24 @@
 <?php
+include_once './core/db/boot.php';
+session_start();
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['_method'])) {
         switch ($_POST['_method']) {
             case 'delete':
                 destroy();
                 break;
-            case 'create':
-                
+            case 'create':                
                 create();
                 break;
             case 'update':
-                // var_dump($_POST);
                 update();
                 break;
         }
 
     }
     header('location: cart.php');
+    // var_dump($_SESSION['cart']);
 }
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     include_once './view/_cart.php';
@@ -61,3 +63,4 @@ function destroy(){
 }
 function update(){
 }
+?>
