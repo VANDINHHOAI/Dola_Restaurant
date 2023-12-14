@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/check_out.css">
+    <link rel="stylesheet" href="./public/css/check_out.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Check out</title>
 </head>
@@ -92,7 +92,7 @@
                         <ul class="list__item">
                             <li class="item">
                                 <div class="image__product">
-                                    <img src="../public/image/products/1.jpg" alt="product">
+                                    <img src="./public/image/products/1.jpg" alt="product">
                                     <span class="quantity">1</span>
                                 </div>
                                 <span class="name__product">Phở cuốn</span>
@@ -101,7 +101,7 @@
                             
                             <li class="item">
                                 <div class="image__product">
-                                    <img src="../public/image/products/1.jpg" alt="product">
+                                    <img src="./public/image/products/1.jpg" alt="product">
                                     <span class="quantity">1</span>
                                 </div>
                                 <span class="name__product">Phở cuốn</span>
@@ -110,7 +110,7 @@
 
                             <li class="item">
                                 <div class="image__product">
-                                    <img src="../public/image/products/1.jpg" alt="product">
+                                    <img src="./public/image/products/1.jpg" alt="product">
                                     <span class="quantity">1</span>
                                 </div>
                                 <span class="name__product">Phở cuốn</span>
@@ -119,7 +119,7 @@
 
                             <li class="item">
                                 <div class="image__product">
-                                    <img src="../public/image/products/1.jpg" alt="product">
+                                    <img src="./public/image/products/1.jpg" alt="product">
                                     <span class="quantity">1</span>
                                 </div>
                                 <span class="name__product">Phở cuốn</span>
@@ -128,7 +128,7 @@
 
                             <li class="item">
                                 <div class="image__product">
-                                    <img src="../public/image/products/1.jpg" alt="product">
+                                    <img src="./public/image/products/1.jpg" alt="product">
                                     <span class="quantity">1</span>
                                 </div>
                                 <span class="name__product">Phở cuốn</span>
@@ -137,7 +137,7 @@
 
                             <li class="item">
                                 <div class="image__product">
-                                    <img src="../public/image/products/1.jpg" alt="product">
+                                    <img src="./public/image/products/1.jpg" alt="product">
                                     <span class="quantity">1</span>
                                 </div>
                                 <span class="name__product">Phở cuốn</span>

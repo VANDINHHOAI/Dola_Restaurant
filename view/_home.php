@@ -164,7 +164,11 @@
                 <?php for ($i=0; $i < 10; $i++) {  ?>
                     <div class="item">
                     <a href="#">
+<<<<<<< HEAD
                        <img src="./public/image/products/<?php echo $productList[$i]['image']?>.jpg" alt=""> 
+=======
+                       <img src="./public/image/products/1.jpg" alt=""> 
+>>>>>>> d60b704fb4978106920953e7561d453ac22428fa
                     </a>
                     <div class="product-info">
                         <a href="#" class="product-name"><?php echo $productList[$i]['name']?></a>
@@ -174,7 +178,155 @@
                         </div>
                     </div>
                     <div class="btn-card">
+<<<<<<< HEAD
                         <a href="detail.php?id=<?php echo $productList[$i]['id']; ?>" class="btn-more" data-product-id="1">Xem chi tiết</a>
+=======
+                        <a href="#" class="btn-more" data-product-id="1">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/2.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Salad rau mùa sốt mác..</a>
+                        <div class="price-box">
+                            <span class="price">68.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="2">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/3.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Phở cuốn</a>
+                        <div class="price-box">
+                            <span class="price">82.000đ</span>
+                            <span class="compare-price">92.000đ</span>
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="3">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/4.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Gỏi tai heo hoa chuối</a>
+                        <div class="price-box">
+                            <span class="price">125.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="4">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/5.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Gà cuốn lá dứa</a>
+                        <div class="price-box">
+                            <span class="price">168.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="5">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/6.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Ức gà đút lò phủ lá chanh</a>
+                        <div class="price-box">
+                            <span class="price">185.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="6">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/7.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Sụn gà xóc muối Tây</a>
+                        <div class="price-box">
+                            <span class="price">135.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="7">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/8.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Nem lụi nướng mía</a>
+                        <div class="price-box">
+                            <span class="price">158.000đ</span>
+                            <span class="compare-price">170.000đ</span>
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="8">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/9.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Phì spaghetti sốt kem nấm</a>
+                        <div class="price-box">
+                            <span class="price">99.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="9">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                       <img src="./public/image/products/10.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Cơm chiên hải sản</a>
+                        <div class="price-box">
+                            <span class="price">89.000đ</span>
+                            <span class="compare-price">99.000đ</span>
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="10">Xem chi tiết</a>
+>>>>>>> d60b704fb4978106920953e7561d453ac22428fa
                     </div>
                 </div>
                 <?php  } ?>         
@@ -192,7 +344,11 @@
             <?php for ($i=5; $i < 10; $i++) {  ?>
                 <div class="items">
                     <a href="#">
+<<<<<<< HEAD
                        <img src="./public/image/products/<?php echo $productList[$i]['image']?>.jpg" alt=""> 
+=======
+                       <img src="./public/image/products/1.jpg" alt=""> 
+>>>>>>> d60b704fb4978106920953e7561d453ac22428fa
                     </a>
                     <div class="product-info">
                         <a href="#" class="product-name"><?php echo $productList[$i]['name']?></a>
@@ -202,7 +358,75 @@
                         </div>
                     </div>
                     <div class="btn-card">
+<<<<<<< HEAD
                         <a href="detail.php?id=<?php echo $productList[$i]['id']; ?>" class="btn-more" data-product-id="1">Xem chi tiết</a>
+=======
+                        <a href="#" class="btn-more" data-product-id="1">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <a href="#">
+                       <img src="./public/image/products/2.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Salad rau mùa sốt mác..</a>
+                        <div class="price-box">
+                            <span class="price">68.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="2">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <a href="#">
+                       <img src="./public/image/products/3.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Phở cuốn</a>
+                        <div class="price-box">
+                            <span class="price">82.000đ</span>
+                            <span class="compare-price">92.000đ</span>
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="3">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <a href="#">
+                       <img src="./public/image/products/4.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Gỏi tai heo hoa chuối</a>
+                        <div class="price-box">
+                            <span class="price">125.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="4">Xem chi tiết</a>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <a href="#">
+                       <img src="./public/image/products/5.jpg" alt=""> 
+                    </a>
+                    <div class="product-info">
+                        <a href="#" class="product-name">Gà cuốn lá dứa</a>
+                        <div class="price-box">
+                            <span class="price">168.000đ</span>
+                            <!-- <span class="compare-price">70.000</span> -->
+                        </div>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="btn-more" data-product-id="5">Xem chi tiết</a>
+>>>>>>> d60b704fb4978106920953e7561d453ac22428fa
                     </div>
                 </div>
                 <?php  } ?>         

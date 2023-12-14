@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
-    <link rel="stylesheet" href="register.css">
-    <link rel="shortcut icon" href="../public/image/logo/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./public/css/register.css">
+    <link rel="shortcut icon" href="./public/image/logo/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- header design -->
     <header class="header" id="header">
         <div class="container">
-            <div class="logo" id="logo"><img src="image/logo/logo.png" alt=""></div>
+            <div class="logo" id="logo"><img src="./public/image/logo/logo.png" alt=""></div>
             <nav class="navbar" id="navbar">
                 <div class="container">
                     <ul>
@@ -103,8 +103,8 @@
                     <div class="block-social-login">
                         <p>Hoặc đăng nhập bằng</p>
                         <div class="img-login">
-                            <a href="#"><img src="image/icon/fb-btn.svg" alt=""></a>
-                            <a href="#"><img src="image/icon/gp-btn.svg" alt=""></a>  
+                            <a href="#"><img src="./public/image/icon/fb-btn.svg" alt=""></a>
+                            <a href="#"><img src="./public/image/icon/gp-btn.svg" alt=""></a>  
                         </div>
                     </div>
                     
