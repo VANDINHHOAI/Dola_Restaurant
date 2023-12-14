@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt hàng</title>
-    <link rel="stylesheet" href="../public/css/buy.css">
-    <link rel="shortcut icon" href="../public/image/logo/favicon.webp" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./public/css/buy.css">
+    <link rel="shortcut icon" href="./public/image/logo/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <!-- header design -->
     <header class="header" id="header">
         <div class="container">
-            <div class="logo" id="logo"><img src="../public/image/logo/logo.png" alt=""></div>
+            <div class="logo" id="logo"><img src="./public/image/logo/logo.png" alt=""></div>
             <nav class="navbar" id="navbar">
                 <div class="container">
                     <ul>
@@ -37,9 +41,9 @@
                             <div class="header-content">
                                 <p>tìm kiếm món ăn của bạn</p>
                                 <div class="input">
-                                    <input type="text" class="my-input" placeholder="Nhập tên món ăn..." >
+                                    <input type="text" class="my-input" placeholder="Nhập tên món ăn...">
                                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                                </div>                 
+                                </div>
                             </div>
                         </li>
                         <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -54,11 +58,11 @@
                             </ul>
                         </li>
                         <li><a href="#"><i class="fa-solid fa-location-dot"></i></a></li>
-                    </ul>                     
+                    </ul>
                     <button class="btn-header">Đặt bàn</button>
                 </div>
             </div>
-        </div>  
+        </div>
     </header>
 
     <div class="bodywrap">
@@ -85,46 +89,72 @@
         <section class="product-layout">
             <div class="container">
                 <div class="col-lg-9">
-                    <div class="buy">
-                        <div class="img-product" id="product-image">
-                            <img src="../public/image/products/1.jpg" alt="" >
-                        </div>
-                        <div class="order">
-                            <h1 class="title-product" id="product-name">Ten san pham</h1>
-                            <div class="price-box">
-                                <span class="special-price" id="product-price">00.000đ</span>
-                                <span class="old-price">Giá tại nhà hàng: <span class="price product-price-old" id="price_old">00.000d</span></span>
-                                <span class="save-price">Tiết kiệm: <span class="price product-price-save" id="save_price">0000d</span></span>
-                            </div>
-                            <div class="clearfix form-group">
-                                <label class="sl section">Số lượng</label>
-                                <div class="add remove">
-                                    <button id="decreaseBtn"><i class="fa-solid fa-minus"></i></button>
-                                    <input type="text" id="inputField" value="1">
-                                    <button id="increaseBtn"><i class="fa-solid fa-plus"></i></button>
+                    <?php foreach ($productList as $product) { ?>
+                        <?php if ($product['id'] == $_GET['id']) { ?>
+                            <div class="buy">
+                                <div class="img-product" id="product-image">
+                                    <img src="./public/image/products/<?php echo $product['image'] ?>.jpg" alt="">
                                 </div>
-                                <div class="btn-box">
-                                    <button class="orange">thêm vào giỏ hàng</button>
-                                    <a href="dat_ban.html" class="red">đặt bàn tại đây</a>
+                                <div class="order">
+                                    <h1 class="title-product" id="product-name">
+                                        <?php echo $product['name'] ?>
+                                    </h1>
+                                    <div class="price-box">
+                                        <span class="special-price" id="product-price">
+                                            <?php echo $product['price'] ?>.000đ
+                                        </span>
+                                        <span class="old-price">Giá tại nhà hàng: <span class="price product-price-old"
+                                                id="price_old">
+                                                <?php echo $product['price'] ?>.000d
+                                            </span></span>
+                                        <span class="save-price">Tiết kiệm: <span class="price product-price-save"
+                                                id="save_price">0d</span></span>
+                                    </div>
+                                    <form action="cart.php" method="post" class="clearfix form-group">
+                                    <input type="hidden" name="_method" value="create">
+                                        <label class="sl section">Số lượng</label>
+                                        <div class="add remove">
+
+                                            <input type="hidden" name="productId" value="<?php echo $product['id']; ?>">
+                                            <input type="hidden" name="productName" value="<?php echo $product['name']; ?>">
+                                            <input type="hidden" name="productImage" value="<?php echo $product['image']; ?>">
+                                            <input type="hidden" name="productPrice" value="<?php echo $product['price']; ?>">
+                                            <button id="decreaseBtn" onclick="decrement()"><i
+                                                    class="fa-solid fa-minus"></i></button>
+                                            <input type="text" id="inputField" value="1" id="numberInput" name="quantity">
+                                            <button id="increaseBtn" onclick="increment()"><i
+                                                    class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                        <div class="btn-box">
+                                                <button class="orange" type="submit">thêm vào giỏ hàng</button>
+                                            <a href="dat_ban.html" class="red">đặt bàn tại đây</a>
+                                        </div>
+                                    </form>
                                 </div>
-                                
                             </div>
-                        </div>
-                    </div>
+                        <?php } ?>
+                    <?php } ?>
+
                     <ul class="tabs">
-                        <li class="tab-link active"><h3>mô tả món ăn</h3></li>
-                        <li class="tab-link"><h3>chính sách</h3></li>
+                        <li class="tab-link active">
+                            <h3>mô tả món ăn</h3>
+                        </li>
+                        <li class="tab-link">
+                            <h3>chính sách</h3>
+                        </li>
                     </ul>
                     <div class="tab-content">
-                        <p id="description">Phở cuốn là món ăn được các đầu bếp dành nhiều thời gian dày công chế biến. 
-                            Với bánh phở tạo ra từ hạt gạo ngâm suốt 12 tiếng liền, sau đó xay và tráng 
-                            cách thủy mang đến miếng bánh ướt mỏng, dai dai hoàn toàn tự nhiên. Thêm vào 
-                            đó là sự kết hợp hài hòa cùng nguyên liệu bò Úc thượng hạng tẩm ướp đậm vị và 
-                            các loại rau thơm nhiệt đới. Khi thưởng thức kèm nước sốt chấm được pha chế 
+                        <p id="description">Phở cuốn là món ăn được các đầu bếp dành nhiều thời gian dày công chế biến.
+                            Với bánh phở tạo ra từ hạt gạo ngâm suốt 12 tiếng liền, sau đó xay và tráng
+                            cách thủy mang đến miếng bánh ướt mỏng, dai dai hoàn toàn tự nhiên. Thêm vào
+                            đó là sự kết hợp hài hòa cùng nguyên liệu bò Úc thượng hạng tẩm ướp đậm vị và
+                            các loại rau thơm nhiệt đới. Khi thưởng thức kèm nước sốt chấm được pha chế
                             đặc biệt mang đến trải nghiệm ẩm thực tuyệt hảo, đầy thú vị.
                         </p>
                         <h3>Thành phần:</h3>
-                        <p id="ingredient">Nạc vai bò Úc, bánh ướt, húng lủi, húng quế, ngò gai, giá sống, cà chua, hành phi, đậu phộng, nước mắm, đường cát Biên Hòa, giấm nuôi, tỏi lột, mè trắng, bột thịt gà, tiêu đen</p>
+                        <p id="ingredient">Nạc vai bò Úc, bánh ướt, húng lủi, húng quế, ngò gai, giá sống, cà chua, hành
+                            phi, đậu phộng, nước mắm, đường cát Biên Hòa, giấm nuôi, tỏi lột, mè trắng, bột thịt gà,
+                            tiêu đen</p>
                         <h3>Khẩu phần:</h3>
                         <p>1 người</p>
                         <h3>Năng lượng:</h3>
@@ -136,220 +166,88 @@
                             <h2><a href="#">Món ăn cùng loại</a></h2>
                         </div>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/1.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                     <a href="#" class="product-name">Salad rau mùa sốt cam</a>
-                                     <div class="price-box">
-                                         <span class="price">68.000đ</span>
-                                         <!-- <span class="compare-price">70.000đ</span> -->
-                                     </div>
-                                 </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/2.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Salad rau mùa sốt mác..</a>
-                                    <div class="price-box">
-                                        <span class="price">68.000đ</span>
-                                        <!-- <span class="compare-price">70.000</span> -->
+                            <?php for ($i = 0; $i < 4; $i++) { ?>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./public/image/products/<?php echo $productList[$i]['image'] ?>.jpg"
+                                            alt="">
+                                    </a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">
+                                            <?php echo $productList[$i]['name'] ?>
+                                        </a>
+                                        <div class="price-box">
+                                            <span class="price">
+                                                <?php echo $productList[$i]['price'] ?>.000đ
+                                            </span>
+                                            <!-- <span class="compare-price">70.000đ</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="btn-card">
+                                        <a href="detail.php?id=<?php echo $productList[$i]['id']; ?>" class="btn-more">Xem
+                                            chi tiết</a>
                                     </div>
                                 </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/3.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Phở cuốn</a>
-                                    <div class="price-box">
-                                        <span class="price">82.000đ</span>
-                                        <!-- <span class="compare-price">92.000đ</span> -->
-                                    </div>
-                                </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/4.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Gỏi tai heo hoa chuối</a>
-                                    <div class="price-box">
-                                        <span class="price">125.000đ</span>
-                                        <!-- <span class="compare-price">70.000</span> -->
-                                    </div>
-                                </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
-                    
+
                     <section class="section-prd-feature">
                         <div class="title-index">
                             <h2><a href="#">Món ăn đã xem</a></h2>
                         </div>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/9.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Phì spaghetti sốt kem nấm</a>
-                                    <div class="price-box">
-                                        <span class="price">99.000đ</span>
-                                        <!-- <span class="compare-price">70.000</span> -->
+                            <?php for ($i = 5; $i < 9; $i++) { ?>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img src="./public/image/products/<?php echo $productList[$i]['image'] ?>.jpg"
+                                            alt="">
+                                    </a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">
+                                            <?php echo $productList[$i]['name'] ?>
+                                        </a>
+                                        <div class="price-box">
+                                            <span class="price">
+                                                <?php echo $productList[$i]['price'] ?>.000đ
+                                            </span>
+                                            <!-- <span class="compare-price">70.000đ</span> -->
+                                        </div>
+                                    </div>
+                                    <div class="btn-card">
+                                        <a href="detail.php?id=<?php echo $productList[$i]['id']; ?>" class="btn-more">Xem
+                                            chi tiết</a>
                                     </div>
                                 </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/7.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Sụn gà xóc muối Tây</a>
-                                    <div class="price-box">
-                                        <span class="price">135.000đ</span>
-                                        <!-- <span class="compare-price">70.000</span> -->
-                                    </div>
-                                </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/6.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Ức gà đút lò phủ lá chanh</a>
-                                    <div class="price-box">
-                                        <span class="price">185.000đ</span>
-                                        <!-- <span class="compare-price">70.000</span> -->
-                                    </div>
-                                </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#">
-                                    <img src="../public/image/products/4.jpg" alt=""> 
-                                 </a>
-                                 <div class="product-info">
-                                    <a href="#" class="product-name">Gỏi tai heo hoa chuối</a>
-                                    <div class="price-box">
-                                        <span class="price">125.000đ</span>
-                                        <!-- <span class="compare-price">70.000</span> -->
-                                    </div>
-                                </div>
-                                 <div class="btn-card">
-                                     <a href="#" class="btn-more">Xem chi tiết</a>
-                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </section>
-                    
+
                 </div>
 
                 <div class="col-lg-3">
                     <div class="content-top">
                         <div class="title">Có thể bạn đang tìm</div>
                         <div class="product">
-                            <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong1.jpg" alt="">
-                                <div class="product-info">
-                                    <div class="info">
-                                        <a href="#" class="product-name">Dương chi cam lộ</a>
-                                    </div>
-                                    <div class="product-box">
-                                        <span class="price">55.000đ</span>
-                                        <button class="btn-card">Đặt món</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong2.jpg" alt="">
-                                <div class="product-info">
-                                    <div class="info">
-                                        <a href="#" class="product-name">Trà lài nhãn</a>
-                                    </div>
-                                    <div class="product-box">
-                                        <span class="price">48.000đ</span>
-                                        <button class="btn-card">Đặt món</button>
+                            <?php for ($i = 11; $i < 16; $i++) { ?>
+                                <div class="product-list">
+                                    <img src="./public/image/products/đồ uống/<?php echo $productList[$i]['image'] ?>.jpg"
+                                        alt="">
+                                    <div class="product-info">
+                                        <div class="info">
+                                            <a href="#" class="product-name">
+                                                <?php echo $productList[$i]['name'] ?>
+                                            </a>
+                                        </div>
+                                        <div class="product-box">
+                                            <span class="price">
+                                                <?php echo $productList[$i]['price'] ?>.000đ
+                                            </span>
+                                            <button class="btn-card">Đặt món</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong3.jpg" alt="">
-                                <div class="product-info">
-                                    <div class="info">
-                                        <a href="#" class="product-name">Trà sữa Oolong</a>
-                                    </div>
-                                    <div class="product-box">
-                                        <span class="price">45.000đ</span>
-                                        <button class="btn-card">Đặt món</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong4.jpg" alt="">
-                                <div class="product-info">
-                                    <div class="info">
-                                        <a href="#" class="product-name">Cà phê</a>
-                                    </div>
-                                    <div class="product-box">
-                                        <span class="price">25.000đ</span>
-                                        <button class="btn-card">Đặt món</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong5.jpg" alt="">
-                                <div class="product-info">
-                                    <div class="info">
-                                        <a href="#" class="product-name">Nước cam</a>
-                                    </div>
-                                    <div class="product-box">
-                                        <span class="price">35.000đ</span>
-                                        <button class="btn-card">Đặt món</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="product-list">
-                                <img src="../public/image/products/đồ uống/do-uong6.jpg" alt="">
-                                <div class="product-info">
-                                    <div class="info">
-                                        <a href="#" class="product-name">Nước ép dâu tây</a>
-                                    </div>
-                                    <div class="product-box">
-                                        <span class="price">15.000đ</span>
-                                        <button class="btn-card">Đặt món</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -361,10 +259,12 @@
         <div class="container">
             <div class="info">
                 <div class="logo">
-                    <img src="../public/image/logo/logo.png" alt="">
+                    <img src="./public/image/logo/logo.png" alt="">
                 </div>
                 <div class="ft-description">
-                    Nhà hàng chúng tôi luôn luôn đặt khách hàng lên hàng đầu, tận tâm phục vụ, mang lại cho khách hàng những trãi nghiệm tuyệt với nhất. Các món ăn với công thức độc quyền sẽ mang lại hương vị mới mẻ cho thực khách. Dola Restaurant xin chân thành cảm ơn.
+                    Nhà hàng chúng tôi luôn luôn đặt khách hàng lên hàng đầu, tận tâm phục vụ, mang lại cho khách hàng
+                    những trãi nghiệm tuyệt với nhất. Các món ăn với công thức độc quyền sẽ mang lại hương vị mới mẻ cho
+                    thực khách. Dola Restaurant xin chân thành cảm ơn.
                 </div>
                 <div class="group-address">
                     <div class="title">Cửa hàng chính</div>
@@ -404,15 +304,15 @@
             <div class="social-box">
                 <h4 class="title-menu">Mạng xã hội</h4>
                 <ul class="social">
-                    <li><a href="#"><img src="../public/image/icon/zalo.svg" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/facebook.svg" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/youtube.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/zalo.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/youtube.svg" alt=""></a></li>
                 </ul>
                 <h4 class="title-menu">Hình thức thanh toán</h4>
                 <ul class="thanhtoan">
-                    <li><a href="#"><img src="../public/image/icon/payment_1.png" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/payment_2.png" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/payment_3.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_1.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_3.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -421,6 +321,7 @@
     <!-- button scroll to top design -->
     <button id="toTop"><i class="fa-solid fa-chevron-up"></i></button>
 
-    <script src="buy.js"></script>
+    <script src="../public/js/buy.js"></script>
 </body>
+
 </html>

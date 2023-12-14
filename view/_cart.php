@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt hàng</title>
-    <link rel="stylesheet" href="../public/css/cart.css">
+    <link rel="stylesheet" href="./public/css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,7 +16,7 @@
     <!-- header design -->
     <header class="header" id="header">
         <div class="container">
-            <div class="logo" id="logo"><img src="../public/image/logo/logo.png" alt=""></div>
+            <div class="logo" id="logo"><img src="./public/image/logo/logo.png" alt=""></div>
             <nav class="navbar" id="navbar">
                 <div class="container">
                     <ul>
@@ -97,13 +97,14 @@
                                             <div class="total">Thành tiền</div>
                                         </div>
                                     </div>
+                                    
                                     <div class="table_cart">
                                         <div class="table_thead">
                                             <div class="table_main">
                                                 <div class="container_table">
                                                     <div class="product">
                                                         <div class="image">
-                                                            <img src="../public/image/products/4.jpg" alt="">
+                                                            <img src="./public/image/products/4.jpg" alt="">
                                                         </div>
                                                         <div class="info">
                                                             <div class="infoo">
@@ -145,7 +146,7 @@
 
                         <div class="cart_voucher">
                             <div class="title_voucher">
-                                <img src="../public/image/logo/voucher.png" alt="">
+                                <img src="./public/image/logo/voucher.png" alt="">
                                 <span>Nhận voucher ngay !!!</span>
                             </div>
                             <div class="thump_check">
@@ -193,7 +194,7 @@
         <div class="container">
             <div class="info">
                 <div class="logo">
-                    <img src="../public/image/logo/logo.png" alt="">
+                    <img src="./public/image/logo/logo.png" alt="">
                 </div>
                 <div class="ft-description">
                     Nhà hàng chúng tôi luôn luôn đặt khách hàng lên hàng đầu, tận tâm phục vụ, mang lại cho khách hàng
@@ -238,15 +239,15 @@
             <div class="social-box">
                 <h4 class="title-menu">Mạng xã hội</h4>
                 <ul class="social">
-                    <li><a href="#"><img src="../public/image/icon/zalo.svg" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/facebook.svg" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/youtube.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/zalo.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/facebook.svg" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/youtube.svg" alt=""></a></li>
                 </ul>
                 <h4 class="title-menu">Hình thức thanh toán</h4>
                 <ul class="thanhtoan">
-                    <li><a href="#"><img src="../public/image/icon/payment_1.png" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/payment_2.png" alt=""></a></li>
-                    <li><a href="#"><img src="../public/image/icon/payment_3.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_1.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_2.png" alt=""></a></li>
+                    <li><a href="#"><img src="./public/image/icon/payment_3.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -255,7 +256,7 @@
     <!-- button scroll to top design -->
     <button id="toTop"><i class="fa-solid fa-chevron-up"></i></button>
 
-    <script src="../public/js/buy.js"></script>
+    <script src="./public/js/buy.js"></script>
 </body>
 
 </html>
