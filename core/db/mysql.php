@@ -1,5 +1,5 @@
     <?php 
-    define('DB_NAME', 'claue_php');
+    define('DB_NAME', 'dola');
     define('DB_USER', 'root');
     define('DB_USER_PASS', '');
 
